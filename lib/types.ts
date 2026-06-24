@@ -1,6 +1,12 @@
 export type Tone = "red" | "amber" | "blue" | "green" | "gray";
 export type Priority = "High" | "Medium" | "Low" | "Backlog";
-export type Status = "Blocked" | "In Progress" | "Pending" | "Not Started" | "Complete" | "Waiting";
+export type Status =
+  | "Blocked"
+  | "In Progress"
+  | "Pending"
+  | "Not Started"
+  | "Complete"
+  | "Waiting";
 export type Lane = "Needs Attention" | "Ready" | "Waiting" | "Done";
 
 export interface StatusSnapshot {
@@ -84,3 +90,11 @@ export interface CommandResult {
   changed: boolean;
   state: AppState;
 }
+
+export const DEFAULT_IMESSAGE: IMessageConfig = {
+  enabled: false,
+  chatGuid: "",
+  allowedSenders: [],
+  lastRowId: 0,
+  sendReplies: false,
+};
