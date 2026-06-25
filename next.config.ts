@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
     "@neondatabase/serverless",
     "@anthropic-ai/sdk",
   ],
+  outputFileTracingIncludes: {
+    "/*": ["./drizzle/**/*"],
+  },
 };
 
 export default nextConfig;
